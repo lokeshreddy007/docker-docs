@@ -21,6 +21,7 @@ Nedd less hardware Resoures
 
 ## Commands
 
+### TODO Make it has a table
 docker pull ubuntu  -- to pull the image from the docker hub
 docker images ls  -- to show list of images
 docker run ubuntu  -- to run the appllication
