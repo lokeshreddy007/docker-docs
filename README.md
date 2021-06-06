@@ -9,41 +9,45 @@ Sometimes application works in your local machine but it is not working in serve
 2. Software version mismatch
 3. Different configuration setting
 
-this were docker comes it into picture, with docker we can easily package out application everthing it need and run it anywhereon machine which has docker 
+this were docker comes it into picture, with docker we can easily package out application everything it need and run it anywhere on machine which has docker 
 
 ## What is Container
 
 An isolated environment for running an application
-Are lighweight
+Are lightweight
 Use Os of the host
 Start quickly
-Nedd less hardware Resoures
+Need less hardware Resources
 
 ## Commands
 
-## TODO Make it has a table
-docker pull ubuntu  -- to pull the image from the docker hub
-docker images ls  -- to show list of images
-docker run ubuntu  -- to run the appllication
-docker ps  - to see the list rununing process
-docker ps -a  -- to see all the stoped container as well
-docker run -it ubuntu  -- to run container in interactive mode
-docker start -i docker-id  -- to start container
+| Commands                    | Info                                     |
+| --------------------------- | ---------------------------------------- |
+| docker pull ubuntu          | to pull the image from the docker hub    |
+| docker images ls            | to show list of images                   |
+| docker run ubuntu           | to run the application                   |
+| docker ps                   | to see the list running process          |
+| docker ps -a                | to see all the stopped container as well |
+| docker run -it ubuntu       | to run container in interactive mode     |
+| docker start -i docker-id   | to start container                       |
+| docker image prune          |                                          |
+| docker container prune      |                                          |
+| docker image rm name        |                                          |
+| dokcer image rm id          |                                          |
+| docker logs id              |                                          |
+| docker logs --help          |                                          |
+| docker build -t react-app . |                                          |
 
-docker build -t react-app . 
+
 docker build -t react-app sh alpine has only shell not bash by default
 
-docker image prune
-docker container prune
-docker image rm name 
-dokcer image rm id
+
 docker image tag react-app:lastest react-app:1
 docker image save -o react-app.tar react-app
 docker image load -i react-app.tar
 docker run -d react-app 
 docker run -d --name bluestar react-app
-docker logs id
-docker logs --help
+
 docker run -d -p 3000:3000 --name bluestar react-app
 docker exec  -- we can execute command on a running container
 docker exec bluestar ls 
